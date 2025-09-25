@@ -15,38 +15,38 @@ const Skills = () => {
     {
       title: "Frontend Development",
       icon: <Code2 className="h-8 w-8" />,
-      skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
+      skills: ["React", "React Native", "JavaScript", "HTML", "CSS", "Bootstrap", "Tailwind CSS"],
       color: "from-blue-500 to-purple-600"
     },
     {
       title: "Backend Development", 
       icon: <Database className="h-8 w-8" />,
-      skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "GraphQL"],
+      skills: ["Django", "Node.js", "Python", "MySQL", "MongoDB", "Firebase"],
       color: "from-green-500 to-teal-600"
     },
     {
-      title: "UI/UX Design",
+      title: "Design & Tools",
       icon: <Palette className="h-8 w-8" />,
-      skills: ["Figma", "Adobe XD", "Prototyping", "User Research", "Wireframing"],
+      skills: ["Figma", "Adobe Photoshop", "WordPress", "n8n"],
       color: "from-pink-500 to-rose-600"
     },
     {
       title: "Mobile Development",
       icon: <Smartphone className="h-8 w-8" />,
-      skills: ["React Native", "Flutter", "iOS", "Android", "PWA"],
+      skills: ["React Native", "Mobile UI/UX"],
       color: "from-orange-500 to-yellow-600"
     },
     {
-      title: "Cloud & DevOps",
-      icon: <Cloud className="h-8 w-8" />,
-      skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform"],
-      color: "from-indigo-500 to-blue-600"
+      title: "Development Tools",
+      icon: <GitBranch className="h-8 w-8" />,
+      skills: ["Git", "GitHub", "Cursor", "ClickUp", "Jira", "Slack"],
+      color: "from-gray-500 to-slate-600"
     },
     {
-      title: "Tools & Workflow",
-      icon: <GitBranch className="h-8 w-8" />,
-      skills: ["Git", "Jira", "Slack", "VS Code", "Postman"],
-      color: "from-gray-500 to-slate-600"
+      title: "Other Technologies",
+      icon: <Cloud className="h-8 w-8" />,
+      skills: ["OpenAI APIs", "Brevo", "DigitalOcean", "Vercel", "Octave", "Arduino"],
+      color: "from-indigo-500 to-blue-600"
     }
   ];
 

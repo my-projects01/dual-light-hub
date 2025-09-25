@@ -18,20 +18,20 @@ const Hero = () => {
           <div className="space-y-8">
             <div>
               <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4">
-                Alex Johnson
+                Kavindu Salinda
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-light italic">
-                Portfolio professional
+                Software Engineer & Full Stack Developer
               </p>
             </div>
             
             <div className="flex items-center gap-3 text-muted-foreground">
               <Globe size={20} />
-              <span className="text-lg">www.alexjohnson.dev</span>
+              <span className="text-lg">kavindus26@gmail.com</span>
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-              Full Stack Developer & UI/UX Designer crafting beautiful, functional digital experiences that solve real problems and delight users.
+              Self-motivated professional with over 2 years of experience specializing in React and Django, with additional proficiency in MERN stack development.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -70,7 +70,7 @@ const Hero = () => {
                 <Linkedin size={24} />
               </a>
               <a 
-                href="mailto:alex@example.com"
+                href="mailto:kavindus26@gmail.com"
                 className="text-muted-foreground hover:text-foreground transform hover:scale-110 transition-all duration-300"
               >
                 <Mail size={24} />

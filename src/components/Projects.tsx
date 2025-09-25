@@ -5,55 +5,37 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with modern UI/UX, payment integration, and admin dashboard. Built with React, Node.js, and PostgreSQL.",
+      title: "Hyvv",
+      description: "Developed a user-friendly interface for the Research Checker using React and Bootstrap, with a secure Django back-end and OpenAI assistant integration.",
       image: "/placeholder.svg",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
+      technologies: ["React", "Bootstrap", "Django", "n8n", "OpenAI", "Brevo"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates, team collaboration features, and beautiful analytics dashboard.",
+      title: "Negombo Cabs",
+      description: "Developed a website for booking vehicles aimed at tourists. Built with Django backend and MySQL database for efficient data management.",
       image: "/placeholder.svg", 
-      technologies: ["Next.js", "MongoDB", "Socket.io", "Chart.js"],
+      technologies: ["Vite", "Lovable", "Django", "WordPress REST API", "MySQL"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
       featured: true
     },
     {
-      title: "Weather Dashboard",
-      description: "Real-time weather application with location-based forecasts, interactive maps, and personalized weather alerts.",
+      title: "Dubsea.com",
+      description: "Rebuilt a web application using Next.js to optimize the frontend, integrated with Django backend and WordPress REST API for blogs.",
       image: "/placeholder.svg",
-      technologies: ["React", "OpenWeather API", "Mapbox", "PWA"],
+      technologies: ["Next.js", "Django", "WordPress"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
       featured: false
     },
     {
-      title: "Portfolio Website",
-      description: "Responsive portfolio website with dark/light theme, smooth animations, and optimized performance.",
+      title: "Blubizlanka",
+      description: "Contributed to the development of a comprehensive web platform, focusing on creating reusable UI components and debugging to enhance user experience.",
       image: "/placeholder.svg",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      featured: false
-    },
-    {
-      title: "Chat Application",
-      description: "Real-time messaging app with group chats, file sharing, and end-to-end encryption for secure communication.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Socket.io", "Express", "MongoDB"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      featured: false
-    },
-    {
-      title: "Fitness Tracker",
-      description: "Mobile-first fitness tracking app with workout plans, progress analytics, and social features for motivation.",
-      image: "/placeholder.svg",
-      technologies: ["React Native", "Firebase", "Chart.js", "Redux"],
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
       liveUrl: "https://example.com",
       githubUrl: "https://github.com",
       featured: false

@@ -12,21 +12,19 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer with over 5 years of experience 
-                creating digital solutions that make a difference. My journey began with 
-                a computer science degree, but my true education came from countless hours 
-                of building, breaking, and rebuilding applications.
+                A self-motivated professional with over 2 years of experience in the tech industry. 
+                I specialize in React and Django as main stack technologies, with additional proficiency 
+                in MERN stack development including Node.js and MongoDB.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I specialize in React, Node.js, and modern web technologies, with a keen 
-                eye for design and user experience. When I'm not coding, you'll find me 
-                exploring new technologies, contributing to open source, or mentoring 
-                upcoming developers.
+                I'm experienced in both remote and onsite work environments, with a reputation as a 
+                fast learner who quickly adapts to new tools and technologies. I'm dedicated to 
+                delivering high-quality solutions while continuously expanding my skills and expertise.
               </p>
               
               <div className="flex flex-wrap gap-3 pt-4">
-                {["Problem Solver", "Team Player", "Innovation Driven", "Detail Oriented"].map((trait) => (
+                {["Problem Solving", "Quick Learning", "Leadership", "Attention to Detail", "Teamwork", "Creativity"].map((trait) => (
                   <span 
                     key={trait}
                     className="px-4 py-2 bg-skill-gradient border border-border rounded-full text-sm font-medium text-foreground"
@@ -43,22 +41,22 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center pb-3 border-b border-border">
                   <span className="text-muted-foreground">Experience</span>
-                  <span className="font-semibold text-foreground">5+ Years</span>
+                  <span className="font-semibold text-foreground">2+ Years</span>
                 </div>
                 
                 <div className="flex justify-between items-center pb-3 border-b border-border">
-                  <span className="text-muted-foreground">Projects Completed</span>
-                  <span className="font-semibold text-foreground">50+</span>
+                  <span className="text-muted-foreground">Education</span>
+                  <span className="font-semibold text-foreground">BSc Electronics & IT</span>
                 </div>
                 
                 <div className="flex justify-between items-center pb-3 border-b border-border">
-                  <span className="text-muted-foreground">Happy Clients</span>
-                  <span className="font-semibold text-foreground">30+</span>
+                  <span className="text-muted-foreground">Current Role</span>
+                  <span className="font-semibold text-foreground">Full Stack Developer</span>
                 </div>
                 
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Coffee Consumed</span>
-                  <span className="font-semibold text-foreground">∞</span>
+                  <span className="text-muted-foreground">Languages</span>
+                  <span className="font-semibold text-foreground">English, Sinhala</span>
                 </div>
               </div>
             </Card>
