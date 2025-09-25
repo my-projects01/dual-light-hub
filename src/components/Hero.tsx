@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Globe } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
@@ -9,85 +9,93 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-hero-gradient">
-      <div className="absolute inset-0 bg-background/10"></div>
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20"></div>
       
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col items-center mb-8">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 ring-4 ring-white/20 shadow-elegant">
-              <img 
-                src={profilePhoto} 
-                alt="Professional headshot" 
-                className="w-full h-full object-cover"
-              />
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Left side - Text content */}
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4">
+                Alex Johnson
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground font-light italic">
+                Portfolio professional
+              </p>
+            </div>
+            
+            <div className="flex items-center gap-3 text-muted-foreground">
+              <Globe size={20} />
+              <span className="text-lg">www.alexjohnson.dev</span>
+            </div>
+            
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
+              Full Stack Developer & UI/UX Designer crafting beautiful, functional digital experiences that solve real problems and delight users.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                size="lg" 
+                className="shadow-elegant transform hover:scale-105 transition-all duration-300"
+                onClick={() => scrollToSection("projects")}
+              >
+                View My Work
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => scrollToSection("contact")}
+              >
+                Get In Touch
+              </Button>
+            </div>
+            
+            <div className="flex space-x-6">
+              <a 
+                href="https://github.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transform hover:scale-110 transition-all duration-300"
+              >
+                <Github size={24} />
+              </a>
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transform hover:scale-110 transition-all duration-300"
+              >
+                <Linkedin size={24} />
+              </a>
+              <a 
+                href="mailto:alex@example.com"
+                className="text-muted-foreground hover:text-foreground transform hover:scale-110 transition-all duration-300"
+              >
+                <Mail size={24} />
+              </a>
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-            Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-white to-primary-glow bg-clip-text text-transparent">
-              Alex Johnson
-            </span>
-          </h1>
-          
-          <h2 className="text-2xl md:text-3xl text-white/90 mb-8 font-light">
-            Full Stack Developer & UI/UX Designer
-          </h2>
-          
-          <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            I craft beautiful, functional digital experiences that solve real problems 
-            and delight users. Passionate about clean code and pixel-perfect design.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 shadow-elegant transform hover:scale-105 transition-all duration-300"
-              onClick={() => scrollToSection("projects")}
-            >
-              View My Work
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
-              onClick={() => scrollToSection("contact")}
-            >
-              Get In Touch
-            </Button>
-          </div>
-          
-          <div className="flex justify-center space-x-6 mb-16">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transform hover:scale-110 transition-all duration-300"
-            >
-              <Github size={24} />
-            </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white transform hover:scale-110 transition-all duration-300"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a 
-              href="mailto:alex@example.com"
-              className="text-white/70 hover:text-white transform hover:scale-110 transition-all duration-300"
-            >
-              <Mail size={24} />
-            </a>
+          {/* Right side - Profile image */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden ring-8 ring-border shadow-2xl">
+                <img 
+                  src={profilePhoto} 
+                  alt="Professional headshot" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full -z-10 blur-2xl"></div>
+            </div>
           </div>
         </div>
         
         <button 
           onClick={() => scrollToSection("about")}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors animate-bounce"
         >
           <ArrowDown size={32} />
         </button>
