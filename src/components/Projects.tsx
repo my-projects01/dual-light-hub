@@ -56,7 +56,7 @@ const Projects = () => {
                         className="flex items-center gap-2"
                       >
                         <ExternalLink size={16} />
-                        Live Demo
+                        Go to Website
                       </a>
                     </Button>}
                     
@@ -125,7 +125,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                     >
                       <ExternalLink size={14} />
-                      Live Demo
+                      Go to Website
                     </a>
                   </Button>}
                   
