@@ -1,46 +1,9 @@
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { projects } from "@/content";
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Hyvv",
-      description: "Developed a user-friendly interface for the Research Checker using React and Bootstrap, with a secure Django back-end and OpenAI assistant integration.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Bootstrap", "Django", "n8n", "OpenAI", "Brevo"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      featured: true
-    },
-    {
-      title: "Negombo Cabs",
-      description: "Developed a website for booking vehicles aimed at tourists. Built with Django backend and MySQL database for efficient data management.",
-      image: "/placeholder.svg", 
-      technologies: ["Vite", "Lovable", "Django", "WordPress REST API", "MySQL"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      featured: true
-    },
-    {
-      title: "Dubsea.com",
-      description: "Rebuilt a web application using Next.js to optimize the frontend, integrated with Django backend and WordPress REST API for blogs.",
-      image: "/placeholder.svg",
-      technologies: ["Next.js", "Django", "WordPress"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      featured: false
-    },
-    {
-      title: "Blubizlanka",
-      description: "Contributed to the development of a comprehensive web platform, focusing on creating reusable UI components and debugging to enhance user experience.",
-      image: "/placeholder.svg",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      featured: false
-    }
-  ];
 
   const featuredProjects = projects.filter(project => project.featured);
   const otherProjects = projects.filter(project => !project.featured);
@@ -61,9 +24,7 @@ const Projects = () => {
                 className="overflow-hidden bg-card-gradient shadow-card hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 border-0"
               >
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <div className="text-6xl font-thin text-primary/30">
-                    {project.title.split(' ').map(word => word[0]).join('')}
-                  </div>
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                 </div>
                 
                 <div className="p-6">
@@ -87,7 +48,7 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex gap-4">
-                    <Button asChild size="sm" className="flex-1">
+                    {project.isLive && <Button asChild size="sm" className="flex-1">
                       <a 
                         href={project.liveUrl} 
                         target="_blank" 
@@ -97,9 +58,9 @@ const Projects = () => {
                         <ExternalLink size={16} />
                         Live Demo
                       </a>
-                    </Button>
+                    </Button>}
                     
-                    <Button asChild variant="outline" size="sm" className="flex-1">
+                    {project.hasCode && <Button asChild variant="outline" size="sm" className="flex-1">
                       <a 
                         href={project.githubUrl} 
                         target="_blank" 
@@ -109,7 +70,7 @@ const Projects = () => {
                         <Github size={16} />
                         Code
                       </a>
-                    </Button>
+                    </Button>}
                   </div>
                 </div>
               </Card>
@@ -157,17 +118,18 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-2">
-                  <Button asChild size="sm" variant="outline" className="flex-1 text-xs">
+                  {project.isLive && <Button asChild size="sm" variant="outline" className="flex-1 text-xs">
                     <a 
                       href={project.liveUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
                       <ExternalLink size={14} />
+                      Live Demo
                     </a>
-                  </Button>
+                  </Button>}
                   
-                  <Button asChild size="sm" variant="outline" className="flex-1 text-xs">
+                  {project.hasCode && <Button asChild size="sm" variant="outline" className="flex-1 text-xs">
                     <a 
                       href={project.githubUrl} 
                       target="_blank" 
@@ -175,7 +137,7 @@ const Projects = () => {
                     >
                       <Github size={14} />
                     </a>
-                  </Button>
+                  </Button>}
                 </div>
               </Card>
             ))}

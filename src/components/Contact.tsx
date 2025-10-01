@@ -2,9 +2,9 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { contactInfo, socialLinks, contactSectionDescription } from "@/content";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -30,48 +30,6 @@ const Contact = () => {
       [e.target.name]: e.target.value
     }));
   };
-
-  const contactInfo = [
-    {
-      icon: <Mail className="h-5 w-5" />,
-      label: "Email",
-      value: "kavindus26@gmail.com",
-      href: "mailto:kavindus26@gmail.com"
-    },
-    {
-      icon: <Phone className="h-5 w-5" />,
-      label: "Phone", 
-      value: "+94 769734690",
-      href: "tel:+94769734690"
-    },
-    {
-      icon: <MapPin className="h-5 w-5" />,
-      label: "Location",
-      value: "Colombo, Sri Lanka",
-      href: "https://maps.google.com"
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: <Github className="h-6 w-6" />,
-      label: "GitHub",
-      href: "https://github.com",
-      color: "hover:text-gray-600"
-    },
-    {
-      icon: <Linkedin className="h-6 w-6" />,
-      label: "LinkedIn", 
-      href: "https://linkedin.com",
-      color: "hover:text-blue-600"
-    },
-    {
-      icon: <Twitter className="h-6 w-6" />,
-      label: "Twitter",
-      href: "https://twitter.com", 
-      color: "hover:text-blue-400"
-    }
-  ];
 
   return (
     <section id="contact" className="py-20 bg-secondary/30">
@@ -153,9 +111,7 @@ const Contact = () => {
                   Get in Touch
                 </h3>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  I'm always interested in new opportunities and exciting projects. 
-                  Whether you have a project in mind or just want to say hello, 
-                  I'd love to hear from you!
+                  {contactSectionDescription}
                 </p>
               </div>
               

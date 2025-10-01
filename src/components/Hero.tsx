@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { ArrowDown, Github, Linkedin, Mail, Globe } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import { heroEmail, heroSectionDescription, heroSectionSubtitle, heroSectionTitle, socialLinks } from "@/content";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -18,20 +19,20 @@ const Hero = () => {
           <div className="space-y-8">
             <div>
               <h1 className="text-6xl md:text-8xl font-bold text-foreground mb-4">
-                Kavindu Salinda
+                {heroSectionTitle}
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-light italic">
-                Software Engineer & Full Stack Developer
+                {heroSectionSubtitle}
               </p>
             </div>
             
             <div className="flex items-center gap-3 text-muted-foreground">
               <Globe size={20} />
-              <span className="text-lg">kavindus26@gmail.com</span>
+              <span className="text-lg">{heroEmail}</span>
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-              Self-motivated professional with over 2 years of experience specializing in React and Django, with additional proficiency in MERN stack development.
+              {heroSectionDescription}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -54,7 +55,7 @@ const Hero = () => {
             
             <div className="flex space-x-6">
               <a 
-                href="https://github.com" 
+                href={socialLinks[0].href} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transform hover:scale-110 transition-all duration-300"
@@ -62,7 +63,7 @@ const Hero = () => {
                 <Github size={24} />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href={socialLinks[1].href} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transform hover:scale-110 transition-all duration-300"
@@ -70,7 +71,7 @@ const Hero = () => {
                 <Linkedin size={24} />
               </a>
               <a 
-                href="mailto:kavindus26@gmail.com"
+                href={`mailto:${heroEmail}`}
                 className="text-muted-foreground hover:text-foreground transform hover:scale-110 transition-all duration-300"
               >
                 <Mail size={24} />
