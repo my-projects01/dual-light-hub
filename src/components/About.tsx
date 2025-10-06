@@ -39,7 +39,7 @@ const About = () => {
                 {quickFacts.map((fact, index) => (
                   <div key={index} className={`flex justify-between items-center ${index < quickFacts.length - 1 ? 'pb-3 border-b border-border' : ''}`}>
                     <span className="text-muted-foreground">{fact.title}</span>
-                    <span className="font-semibold text-foreground">{fact.value}</span>
+                    <span className="font-semibold text-foreground text-right text-balance">{fact.value}</span>
                   </div>
                 ))}
               </div>

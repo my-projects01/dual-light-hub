@@ -9,21 +9,21 @@ import dubseaImg from "@/assets/projects/dubseaImg.png";
 
 // hero section
 export const heroSectionTitle = "Kavindu Salinda";
-export const heroSectionSubtitle = "Software Engineer & Full Stack Developer";
+export const heroSectionSubtitle = "Full Stack Software Engineer";
 export const heroEmail = "kavindus26@gmail.com";
-export const heroSectionDescription = "Self-motivated professional with over 2 years of experience specializing in React and Django, with additional proficiency in MERN stack development";
+export const heroSectionDescription = "Self motivated professional with over 2 years of experience specializing in React and Django, with additional proficiency in MERN stack development";
 
 // about section
-export const descriptionPart1 = "A self-motivated professional with over 2 years of experience in the tech industry. I specialize in React and Django as main stack technologies, with additional proficiency in MERN stack development including Node.js and MongoDB.";
-export const descriptionPart2 = "I'm experienced in both remote and onsite work environments, with a reputation as a fast learner who quickly adapts to new tools and technologies. I'm dedicated to delivering high-quality solutions while continuously expanding my skills and expertise.";
+export const descriptionPart1 = "A self motivated professional with over 2 years of experience in the tech industry. I specialize in React and Django as main stack technologies, with additional proficiency in MERN stack development including Node.js and MongoDB.";
+export const descriptionPart2 = "I'm experienced in both remote and onsite work environments, with a reputation as a fast learner who quickly adapts to new tools and technologies. I'm dedicated to delivering high quality solutions while continuously expanding my skills and expertise.";
 
 // quick facts section
 export const experience = "2+ Years"; 
-export const education = "BSc Electronics & IT";
-export const currentRole = "Full Stack Developer";
+export const education = "BSc Electronics & IT (University of Colombo)";
+export const currentRole = "Full Stack Software Engineer";
 export const languages = "English, Sinhala";
 
-// Quick Facts Data -about section
+// Quick Facts Data  about section
 export const quickFacts = [
     {
         title: "Experience",
@@ -91,13 +91,13 @@ export const contactInfo = [
     // }
   ];
 
-// Projects Data -projects section
+// Projects Data  projects section
 export const projects = [
     {
       title: "Hyvv",
-      description: "Developed a user-friendly interface for the Research Checker using React and Bootstrap, with a secure Django back-end and OpenAI assistant integration.",
+      description: "Developed a user friendly interface for the Research Checker using React and Bootstrap, with a secure Django back end and OpenAI assistant integration.",
       image: hyvvImg, // image pathales
-      technologies: ["React", "Bootstrap", "Django", "n8n", "OpenAI", "Brevo"],
+      technologies: ["React", "Bootstrap", "Django", "n8n", "RAG agents","OpenAI", "Brevo"],
       liveUrl: "https://app.thehyvv.com/",
       isLive: true, // true or false for live url
       githubUrl: "https://github.com",
